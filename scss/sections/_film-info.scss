@@ -267,3 +267,16 @@
         }
     }
 }
+
+
+.film-info {
+    @media screen and (max-width: 1560px) {
+        &__banner {
+            width: 30%;
+        }
+        
+        &__details {
+            width: 70%;
+        }
+    }
+}

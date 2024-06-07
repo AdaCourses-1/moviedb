@@ -119,3 +119,44 @@
         }
     }
 }
+
+.selections {
+    @media screen and (max-width: 1560px) {
+        &__block {
+            width: 100%;
+            max-width: 865px;
+        }
+        &-btn-next {
+            right: 420px;
+        }
+        &-btn-prev {
+            left: 15px;
+        }
+    }
+}
+.popular-collections {
+    @media screen and (max-width: 1560px) {
+        .popular-collections {
+            width: 30%;
+            max-width: 100%;
+        }
+        &__swiper-button-next {
+            right: 15px;
+        }
+    }
+}
+.new-selections {
+    @media screen and (max-width: 1560px) {
+        .selections__block {
+            width: 100%;
+            max-width: 100%;
+        }
+        &-btn-next {
+            right: 15px;
+        }
+
+        &-btn-prev {
+            left: 15px;
+        }
+    }
+}
