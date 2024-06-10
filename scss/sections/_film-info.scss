@@ -268,7 +268,6 @@
     }
 }
 
-
 .film-info {
     @media screen and (max-width: 1560px) {
         &__banner {
@@ -277,6 +276,59 @@
         
         &__details {
             width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .container {
+            flex-wrap: wrap;
+        }
+
+        &__banner {
+            width: 100%;
+        }
+        
+        &__details {
+            width: 100%;
+        }
+
+        &__image {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        &__icon,
+        &__watch,
+        &__poster::before {
+            display: none;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        &__characteristics {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .col-3,
+        .col-4,
+        .col-2 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &-characteristics__title,
+        &-characteristics__subtitle {
+            font-size: 14px;
         }
     }
 }

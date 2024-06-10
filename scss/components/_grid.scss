@@ -85,6 +85,29 @@
     }
 }
 
+
+@media screen and (max-width: 560px) {
+    .films {
+        &__image {
+            height: 215px;
+            opacity: 1 !important;
+        }
+
+        &__play, 
+        &__watch {
+            display: none;
+        }
+
+        &__subtitle {
+            margin: 10px 0 5px;
+        }
+
+        &__info {
+            font-size: 14px;
+        }
+    }
+}
+
 .row {
     display: flex;
 }

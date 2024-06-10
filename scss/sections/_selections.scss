@@ -133,6 +133,12 @@
             left: 15px;
         }
     }
+
+    @media screen and (max-width: 560px) {
+        &-btn-prev {
+            display: none;
+        }
+    }
 }
 .popular-collections {
     @media screen and (max-width: 1560px) {
@@ -144,7 +150,17 @@
             right: 15px;
         }
     }
+
+    @media screen and (max-width: 560px) {
+        display: none;
+
+        &__swiper-button-next,
+        &__swiper-button-prev {
+            display: none;
+        }
+    }
 }
+
 .new-selections {
     @media screen and (max-width: 1560px) {
         .selections__block {
@@ -157,6 +173,13 @@
 
         &-btn-prev {
             left: 15px;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        &-btn-next,
+        &-btn-prev {
+            display: none;
         }
     }
 }

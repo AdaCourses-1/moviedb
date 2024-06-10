@@ -10,20 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./scss/style.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./scss/style.css">
 </head>
 
 <body>
+    <!-- <div class="bg-cover-1"></div>
+    <div class="bg-cover-logo">
+        <img class="logo__image" src="./img/logo.svg" alt="MovieDB">
+    </div> -->
+
+
+
     <header class="header">
         <div class="container">
-            <div class="header__logo logo">
+            <div data-wow-delay="0.4s" class="header__logo logo wow animate__animated animate__fadeInDown">
                 <a class="logo__link" href="./index.html">
                     <img class="logo__image" src="./img/logo.svg" alt="MovieDB">
                 </a>
             </div>
 
-            <nav class="header__nav nav">
+            <nav data-wow-delay="0.4s" class="header__nav nav wow animate__animated animate__fadeInDown">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a class="nav__link" href="#">Главная</a>
@@ -52,7 +63,7 @@
                 </ul>
             </nav>
 
-            <div class="header__searchbar searchbar">
+            <div data-wow-delay="0.4s" class="header__searchbar searchbar wow animate__animated animate__fadeInDown">
                 <input class="searchbar__input" placeholder="Поиск по сайту" type="text">
                 <img class="searchbar__icon" src="./img/search-icon.svg" alt="Search">
             </div>
@@ -61,7 +72,7 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero__content swiper">
+            <div data-wow-delay="0.4s" class="hero__content swiper wow animate__animated animate__fadeIn">
                 <div class="hero__posters swiper-wrapper">
                     <div class="hero__poster swiper-slide">
                         <div class="hero__breadcrumbs breadcrumbs">
@@ -137,7 +148,7 @@
                 <div class="swiper-pagination"></div>
             </div>
 
-            <aside class="collection">
+            <aside data-wow-delay="0.4s" class="collection wow animate__animated animate__fadeIn">
                 <h3 class="collection__title">Похожие коллекции</h3>
                 <div class="collection__row">
                     <div class="collection__column">
@@ -200,7 +211,7 @@
         </div>
     </section>
 
-    <section class="selections">
+    <section data-wow-delay="0.4s" class="selections wow animate__animated animate__fadeIn">
         <div class="container">
             <div class="selections__block">
                 <h2 class="selections__title title">Лучшие фильмы подборки</h2>
@@ -351,7 +362,7 @@
         </div>
     </section>
 
-    <section class="selections new-selections">
+    <section data-wow-delay="0.4s" class="selections new-selections wow animate__animated animate__fadeIn">
 
         <div class="container">
             <div class="selections__block">
@@ -471,7 +482,7 @@
         </div>
     </section>
 
-    <section class="film-info">
+    <section data-wow-delay="0.4s" class="film-info wow animate__animated animate__fadeIn">
 
         <div class="container">
             <img class="film-info__bg" src="./img/batman.png" alt="batman">
@@ -572,7 +583,7 @@
         </div>
     </section>
 
-    <section class="film-info">
+    <section data-wow-delay="0.4s" class="film-info wow animate__animated animate__fadeIn">
 
         <div class="container">
             <div class="col-3 film-info__banner">
@@ -671,7 +682,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer data-wow-delay="0.4s" class="footer wow animate__animated animate__fadeIn">
         <div class="container">
             <div class="row footer__top">
                 <div class="col-3">
@@ -800,7 +811,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
         new Swiper('.swiper', {
             loop: true,
@@ -823,12 +835,13 @@
                 // when window width is >= 320px
                 320: {
                     slidesPerView: 2,
-                    spaceBetween: 20
+                    spaceBetween: 10,
+                    centeredSlides: true,
                 },
                 // when window width is >= 480px
                 580: {
                     slidesPerView: 2,
-                    spaceBetween: 30
+                    spaceBetween: 20
                 },
                 // when window width is >= 640px
                 1240: {
@@ -863,8 +876,33 @@
                 nextEl: ".new-selections-btn-next",
                 prevEl: ".new-selections-btn-prev",
             },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                // when window width is >= 480px
+                580: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 640px
+                1240: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+                1560: {
+                    slidesPerView: 5,
+                    spaceBetween: 40
+                }
+            }
         });
+    </script>
 
+    <script>
+        new WOW().init();
     </script>
 </body>
 
