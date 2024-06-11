@@ -148,6 +148,7 @@ table {
   transition: 0.3s;
 }
 .films__poster {
+  display: block;
   position: relative;
 }
 .films__poster:hover {
@@ -446,10 +447,70 @@ table {
   stroke: #81BECB;
 }
 
+@media screen and (max-width: 560px) {
+  .footer__top {
+    flex-wrap: wrap;
+  }
+  .footer .col-3,
+  .footer .col-6 {
+    width: 100%;
+  }
+  .footer .col-6 {
+    display: none;
+  }
+  .footer .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 88px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #252A2C;
+  }
+  .footer .logo__image {
+    width: 142px;
+    height: 88px;
+  }
+  .footer__title {
+    text-align: center;
+  }
+  .footer .nav {
+    display: flex;
+    justify-content: center;
+  }
+  .footer .nav__list {
+    align-items: center;
+  }
+  .footer .nav__item {
+    padding-right: 0;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .social {
+    order: -1;
+  }
+  .footer .social svg {
+    width: 37px;
+    height: 37px;
+  }
+  .footer__copyright {
+    order: 1;
+    font-size: 14px;
+  }
+  .footer__confidencial {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+}
+
 .hero {
   padding: 30px 0;
 }
 .hero__poster {
+  display: block;
   position: relative;
 }
 .hero__breadcrumbs {
@@ -830,6 +891,7 @@ table {
   max-width: 428px;
 }
 .film-info__poster {
+  display: block;
   position: relative;
 }
 .film-info__poster::before {
@@ -871,6 +933,7 @@ table {
   transition: 0.3s;
 }
 .film-info__poster {
+  display: block;
   position: relative;
 }
 .film-info__poster:hover {
@@ -1037,6 +1100,9 @@ table {
   }
 }
 @media screen and (max-width: 560px) {
+  .film-info {
+    padding-bottom: 40px;
+  }
   .film-info .container {
     flex-wrap: wrap;
   }
@@ -1074,6 +1140,39 @@ table {
     width: 100%;
   }
   .film-info-characteristics__title, .film-info-characteristics__subtitle {
+    font-size: 14px;
+  }
+  .film-info-attributes .col-4 {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 33%;
+  }
+  .film-info-attributes .col-8 {
+    width: 68%;
+  }
+  .film-info-attributes__title {
+    font-size: 14px;
+    padding: 18px 10px;
+  }
+  .film-info-attributes__title:nth-child(3) {
+    max-width: 110px;
+  }
+  .film-info-attributes__description {
+    font-size: 14px;
+    padding: 18px 10px;
+  }
+  .film-info-attributes__links {
+    flex-wrap: wrap;
+    padding: 18px 10px;
+  }
+  .film-info-attributes__links a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .film-info-story__title {
+    font-size: 16px;
+  }
+  .film-info-story__description, .film-info-story__more {
     font-size: 14px;
   }
 }
